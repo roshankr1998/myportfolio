@@ -22,7 +22,6 @@ export default function ProjectDetails() {
       id: 3, 
       title: "Epistle:The Book Donation App", 
       details: "This project is a community-driven Android application designed to facilitate the donation and sharing of books, connecting readers and learners while promoting a culture of generosity. Users can easily sign up to either donate their unused books or request books they need, fostering a seamless exchange of resources within the community. The application includes an advanced search module that allows users to quickly find specific books, access eBooks, or locate nearby libraries and bookstores. By making books more accessible and encouraging the circulation of knowledge, the platform embodies the philosophy of ‘Sharing is Caring,’ ensuring that valuable reading material reaches those who can benefit from it most.", 
-      video: "videos/test.mp4" 
     },
   ];
 

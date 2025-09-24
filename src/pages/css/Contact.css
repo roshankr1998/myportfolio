@@ -1,0 +1,94 @@
+.contact {
+  text-align: center;
+  padding: 5vh 5vw;
+  justify-content: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact h2 {
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 10px; /* reduce space below heading */
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.contact p {
+  font-size: clamp(15px, 3vw, 16px);
+  margin-top: 40px;
+  margin-bottom: 20px; /* reduce space below text */
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Links Container */
+.contact-links {
+  display: flex;
+  margin-top: 30px;
+  padding-top: 30px;
+  gap: 30px; /* reduce gap between buttons if needed */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* margin-top: 0; ensure no extra margin pushing down */
+}
+
+/* Individual link/button */
+.contact-links button,
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 120px;
+  max-width: 45%;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.contact-links button:hover,
+.contact-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Icons */
+.contact-links .icon {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+/* Labels */
+.contact-links span {
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 600;
+  color: #facc15;
+}
+
+/* Email Icon Override */
+.contact-links a .icon {
+  color: #f87171;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .contact-links {
+    gap: 20px;
+  }
+  .contact-links button,
+  .contact-links a {
+    min-width: 100px;
+    max-width: 45%;
+  }
+  .contact-links .icon {
+    font-size: 60px;
+  }
+  .contact-links span {
+    font-size: 14px;
+  }
+}

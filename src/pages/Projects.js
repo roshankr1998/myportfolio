@@ -25,7 +25,7 @@ export default function Projects() {
   const goToDetails = (id) => navigate(`/project/${id}`);
 
   return (
-    <section className="home" >
+    <section className="proj" >
       <div>
         <h2>My Projects</h2>
         <p>
@@ -41,7 +41,7 @@ export default function Projects() {
               className="glass-card"
             >
               {/* Heading and description same size */}
-              <h4 className="head">{project.title}</h4>
+              <h4 className="head"><u>{project.title}</u></h4>
               <p className="text">{project.desc}</p>
 
               <span className="head">

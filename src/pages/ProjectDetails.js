@@ -16,8 +16,7 @@ export default function ProjectDetails() {
       id: 2, 
       title: "Inventory Management System", 
       details: 
-        "The Inventory Management System is a standalone GUI-based application built to streamline the process of managing inventory records in real time. It provides businesses with the ability to accurately track both incoming and outgoing stock using a lightweight yet reliable SQLite database integration. Designed with usability in mind, the application features an intuitive and user-friendly interface that makes it accessible even to non-technical users. Beyond day-to-day tracking, it simplifies administrative tasks by enabling quick data entry, instant updates, and efficient retrieval of records. This ensures smoother operations, reduces manual errors, and enhances overall productivity for businesses of any scale.",
-      video: "videos/test.mp4" 
+        "The Inventory Management System is a standalone GUI-based application built to streamline the process of managing inventory records in real time. It provides businesses with the ability to accurately track both incoming and outgoing stock using a lightweight yet reliable SQLite database integration. Designed with usability in mind, the application features an intuitive and user-friendly interface that makes it accessible even to non-technical users. Beyond day-to-day tracking, it simplifies administrative tasks by enabling quick data entry, instant updates, and efficient retrieval of records. This ensures smoother operations, reduces manual errors, and enhances overall productivity for businesses of any scale."
     },
     { 
       id: 3, 

@@ -1,16 +1,11 @@
 import React from "react";
 import "./css/About.css";
-import profilePic from "./resources/profile.png"; // Add your profile photo in the same folder
 
 export default function About() {
   return (
     <section className="about">
       <div className="container">
         <div className="about-content">
-          {/* Profile Photo */}
-          <div className="profile-photo">
-            <img src={profilePic} alt="Profile" />
-          </div>
 
           {/* Text */}
           <div className="about-text-container">

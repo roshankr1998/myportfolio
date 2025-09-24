@@ -1,7 +1,16 @@
+/* Global page styles */
+body {
+  background-color: #0f172a; /* entire page background */
+  color: #e2e8f0;            /* default text color */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;   /* optional: global font */
+}
+
+/* About section */
 .about {
   padding: 10vh 5vw;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  /* background-color removed since body already has the same color */
 }
 
 .about-content {

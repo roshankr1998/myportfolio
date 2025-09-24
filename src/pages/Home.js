@@ -1,4 +1,5 @@
 import React from "react";
+import { RxFontSize } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 export default function Home() {

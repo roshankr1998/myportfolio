@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Education from "./pages/Education";
+import VideoPlayer from "./pages/VideoPlayer"
 import "./App.css";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Projects from "./Projects";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Education" element={<Education/>}/>
+            <Route path="/video" element={<VideoPlayer />} />
           </Routes>
         </div>
         <footer>&copy; 2025 Roshan Kumar. All rights reserved.</footer>

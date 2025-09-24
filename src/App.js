@@ -11,7 +11,7 @@ import "./App.css";
 // import Projects from "./Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 
-function App() {
+function App() { 
   return (
     <div className="App">
       <Router>

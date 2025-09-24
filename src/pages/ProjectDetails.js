@@ -9,7 +9,7 @@ export default function ProjectDetails() {
     { 
       id: 1, 
       title: "Portfolio Website", 
-      details: "Detailed description, tech stack, images, links, etc.", 
+      details: "A modern, responsive portfolio website built to showcase my skills, projects, and professional experience. Designed with a clean and minimalistic UI, it highlights key accomplishments, development projects, and personal branding in a visually engaging manner. The website is optimized for performance and fully mobile-responsive, ensuring a smooth experience across devices.", 
   
     },
     { 

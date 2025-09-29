@@ -9,7 +9,7 @@ export default function WorkExperience() {
       company: "Broadridge Financial Solutions",
       duration: "July 2025 - Present (0.3 years)",
       description:
-        "As a Member Technical at Broadridge Financial Solutions, I have designed and implemented cloud-based solutions using AWS services such as EC2, S3, and RDS, improving infrastructure scalability and reliability. I automated deployment pipelines with Terraform, which reduced deployment time significantly. I also monitored and analyzed system performance to identify and mitigate potential bottlenecks, ensuring optimal application uptime. Additionally, I collaborated with cross-functional teams to migrate legacy systems to cloud environments, achieving a 25% reduction in operational costs."
+        "As a Senior Member Technical at Broadridge Financial Solutions, I have designed and implemented cloud-based solutions using AWS services such as EC2, S3, and RDS, improving infrastructure scalability and reliability. I automated deployment pipelines with Terraform, which reduced deployment time significantly. I also monitored and analyzed system performance to identify and mitigate potential bottlenecks, ensuring optimal application uptime. Additionally, I collaborated with cross-functional teams to migrate legacy systems to cloud environments, achieving a 25% reduction in operational costs."
     },{
       title: "Member Technical (SDE-1)",
       company: "Broadridge Financial Solutions",

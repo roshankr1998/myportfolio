@@ -58,6 +58,7 @@ export default function Header() {
         <Link to="/experience">Work Experience</Link>
         <Link to="/education">Education & Skills</Link>
         <Link to="/projects">Projects</Link>
+        <Link to="/profile">Coding Profiles</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>
@@ -87,6 +88,9 @@ export default function Header() {
           </Link>
           <Link to="/projects" onClick={() => setMenuOpen(false)}>
             Projects
+          </Link>
+          <Link to="/profile" onClick={() => setMenuOpen(false)}>
+            Coding Profile
           </Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>
             About

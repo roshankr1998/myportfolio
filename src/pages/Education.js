@@ -5,7 +5,7 @@ import { SiJavascript, SiMongodb, SiExpress, SiMysql, SiKotlin, SiAndroidstudio,
 export default function Education() {
   const education = [
     { title: "Matriculation", desc: "Board: CBSE", score: "CGPA: 8.4 / 10", yop: "2012-2014" },
-    { title: "Senior Secondary (12th)", desc: "Board: CBSE", score: "Percentage: 75.28%", yop: "2016-2019" },
+    { title: "Diploma", desc: "Board: SBTE", score: "Percentage: 75.28%", yop: "2016-2019" },
     { title: "Bachelor of Technology (B.Tech)", desc: "Specialization: Computer Science & Engineering", score: "CGPA: 9.28 / 10", yop: "2020-2023" },
   ];
 

@@ -5,19 +5,26 @@ import hackerrankLogo from "../assets/icons8-hackerrank-32.png";
 import codeforcesLogo from "../assets/icons8-codeforces-24.png";
 
 export default function Profile() {
-  const [leetcodeStats, setLeetCodeStats] = useState({ solved: "Loading...", rating: "NA" });
+  const [leetcodeStats, setLeetCodeStats] = useState({ solved: 0, rating: "NA" });
+  const [totalSolved, setTotalSolved] = useState(0);
 
-  // Fetch LeetCode stats via public API
   useEffect(() => {
     fetch("https://leetcode-stats-api.herokuapp.com/roshankumar1998")
       .then((res) => res.json())
-      .then((data) =>
+      .then((data) => {
+        const solved = data.totalSolved ?? 0;
         setLeetCodeStats({
-          solved: data.totalSolved ?? "N/A",
-          rating: data.acSubmissionRate ?? "NA", // use AC rate as a pseudo rating
-        })
-      )
-      .catch(() => setLeetCodeStats({ solved: "Error", rating: "NA" }));
+          solved,
+          rating: data.acSubmissionRate ?? "NA",
+        });
+
+        // Calculate total after fetching LeetCode
+        setTotalSolved(solved + 114 + 400 + 67);
+      })
+      .catch(() => {
+        setLeetCodeStats({ solved: 0, rating: "NA" });
+        setTotalSolved(0 + 114 + 400 + 67); // fallback without LeetCode
+      });
   }, []);
 
   const profiles = [
@@ -57,9 +64,22 @@ export default function Profile() {
 
   return (
     <div className="proj">
-      <h1 style={{ fontSize: "2.2rem", marginBottom: "2rem", textAlign: "center" }}>
+      <h1 style={{ fontSize: "2.2rem", marginBottom: "0.5rem", textAlign: "center" }}>
         My Coding Profiles
       </h1>
+
+      {/* ✅ Total questions solved section */}
+      <p
+  style={{
+    fontSize: "1.2rem",
+    marginBottom: "2rem",
+    textAlign: "center",
+    color: "lightblue"
+  }}
+>
+        <u><strong>Total Questions Solved:</strong> {totalSolved}</u>
+      </p>
+
       <div
         className="projects-container"
         style={{

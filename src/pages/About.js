@@ -10,7 +10,7 @@ export default function About() {
           <div className="about-text-container">
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
-              I’m a Software Development Engineer (Member Technical) at Broadridge, based in Bengaluru, with over 2 years of experience building scalable and reliable solutions for the financial services industry. I have a strong foundation in Java, C, C++, ASP.NET, and HTML, and I leverage cloud technologies such as AWS to design secure, high-performance systems. I enjoy solving complex problems, optimizing applications, and collaborating with cross-functional teams to deliver robust software.
+              I’m a Software Development Engineer (Senior Member Technical) at Broadridge, based in Bengaluru, with over 3+ years of experience building scalable and reliable solutions for the financial services industry. I have a strong foundation in Java, C, C++, ASP.NET, and HTML, and I leverage cloud technologies such as AWS to design secure, high-performance systems. I enjoy solving complex problems, optimizing applications, and collaborating with cross-functional teams to deliver robust software.
             </p>
 
             <h2 className="section-subtitle">Looking Forward</h2>

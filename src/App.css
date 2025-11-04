@@ -48,6 +48,51 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Home heading and role styles (match screenshot color pattern) */
+.home h1 {
+  font-size: clamp(34px, 6vw, 72px);
+  line-height: 1.02;
+  font-weight: 800;
+  color: #f8fafc; /* near-white for the main heading */
+  margin-bottom: 0.6rem;
+}
+
+.home h1 .nameAccent {
+  font-weight: 900;
+  /* brighter cyan-turquoise gradient to match the image */
+  background: linear-gradient(90deg, #06b6ff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.home h1 .role {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(20px, 3.5vw, 34px);
+  font-weight: 800;
+  /* slightly darker cyan gradient for emphasis */
+  background: linear-gradient(90deg, #00b4ff 0%, #0077d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 6px;
+  color: #00b4ff;
+  animation: blink 1.4s steps(1) infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 header .logo {
   font-size: clamp(20px, 2.5vw, 28px);
   font-weight: 700;

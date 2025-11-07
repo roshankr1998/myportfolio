@@ -1,6 +1,6 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaPython, FaJava, FaCloud } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiMysql, SiKotlin, SiAndroidstudio, SiFirebase, SiSqlite, SiTerraform, SiVscode } from "react-icons/si";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaPython, FaJava, FaCloud, FaMicrosoft, FaCode } from "react-icons/fa";
+import { SiJavascript, SiMongodb, SiExpress, SiMysql, SiKotlin, SiAndroidstudio, SiFirebase, SiSqlite, SiTerraform, SiVscode, SiC, SiCplusplus } from "react-icons/si";
 
 export default function Education() {
   const education = [
@@ -14,12 +14,16 @@ export default function Education() {
     { name: "Java", icon: <FaJava size={40} color="#f89820" /> },
     { name: "Kotlin", icon: <SiKotlin size={40} color="#0095d5" /> },
     { name: "Python", icon: <FaPython size={40} color="#3776ab" /> },
-    { name: "C", icon: <SiJavascript size={40} color="#f34b7d" /> }, // Placeholder icon for C
-    { name: "C++", icon: <SiJavascript size={40} color="#00599c" /> }, // Placeholder icon for C++
+  { name: "C", icon: <SiC size={40} color="#00599c" /> },
+  { name: "C++", icon: <SiCplusplus size={40} color="#00599c" /> },
     { name: "SQL", icon: <SiMysql size={40} color="#00758f" /> },
     { name: "Node.js", icon: <FaNodeJs size={40} color="#68a063" /> },
     { name: "JavaScript", icon: <SiJavascript size={40} color="#facc15" /> },
     { name: "React.js", icon: <FaReact size={40} color="#38bdf8" /> },
+
+  // Microsoft / .NET family
+  { name: "ASP.NET", icon: <FaMicrosoft size={40} color="#5A6AFC" /> },
+  { name: "VB.NET", icon: <FaCode size={40} color="#6c8ebf" /> },
 
     // Technologies
     { name: "Android Studio", icon: <SiAndroidstudio size={40} color="#3ddc84" /> },
@@ -30,7 +34,7 @@ export default function Education() {
 
     // Cloud Tools
     { name: "AWS", icon: <FaCloud size={40} color="#ff9900" /> },
-    { name: "Terraform", icon: <FaCloud size={40} color="#623ce4" /> }
+  { name: "Terraform", icon: <SiTerraform size={40} color="#623ce4" /> }
   ];
 
   return (

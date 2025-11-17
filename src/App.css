@@ -586,7 +586,7 @@ a:focus, button:focus, input:focus, .nav-link:focus {
   /* padding-bottom: 20px; */
 }
 .glass-card1 .head {
-  color: #38bdf8;
+  color: var(--accent-start);
   font-size: 18px;
   font-weight: 600;
   margin-top: 10px;
@@ -663,7 +663,7 @@ ul, ol { color: var(--text); }
   width: 0%;
   background: linear-gradient(90deg,var(--accent-start),var(--accent-end));
   z-index: 9999;
-  box-shadow: 0 2px 10px rgba(124,92,255,0.08);
+  box-shadow: 0 2px 10px rgba(255,71,119,0.08);
 }
 
 /* subtle entrance for sections */
@@ -726,7 +726,7 @@ body.dark { --text: #e6f7ff; background: linear-gradient(180deg, #071827 0%, #03
   font-size: clamp(38px, 6vw, 52px);
   margin-bottom: 20px;
   font-weight: 800;
-  color: #38bdf8;
+  color: var(--text);
 }
 
 .glass-card a {
@@ -742,7 +742,7 @@ body.dark { --text: #e6f7ff; background: linear-gradient(180deg, #071827 0%, #03
 .home p {
   font-size: clamp(20px, 3vw, 21px);
   margin-bottom: 30px;
-  color: #e2e8f0;
+  color: var(--muted);
   margin-top: 20px;
   padding-top: 20px;
   margin-bottom: 40px;
@@ -753,14 +753,14 @@ body.dark { --text: #e6f7ff; background: linear-gradient(180deg, #071827 0%, #03
   padding: clamp(10px, 2vw, 14px) clamp(20px, 5vw, 28px);
   font-size: clamp(13px, 1.4vw, 16px);
   border-radius: 30px;
-  background: linear-gradient(90deg, #facc15, #f97316);
-  color: #0f172a;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-2-end));
+  color: white;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 28px rgba(255,122,89,0.12);
 }
 .home .btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #fde047, #fb923c);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(255,122,89,0.12);
 }

@@ -135,68 +135,89 @@ header .container {
   .hero-right { order: -1 }
   .avatar { width:180px; height:180px }
 }
-/* ----------------------------- */
-/* 🔥 MOBILE FIXES ONLY 🔥 */
-/* ----------------------------- */
+/* ----------------------------------------- */
+/* 🔥 IMPROVED MOBILE FIXES (CLEAN + CENTERED) */
+/* ----------------------------------------- */
 
 @media (max-width: 600px) {
 
-  /* Fix section headings misalignment */
+  /* Global heading alignment */
   h1, h2, h3, .section-title {
     width: 100%;
     text-align: center !important;
-    display: block;
+    line-height: 1.2;
   }
 
-  /* Fix Contact heading alignment */
+  /* Contact Heading - centered + spacing fixed */
   .contact h2 {
-    font-size: clamp(30px, 7vw, 40px);
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 12px;
   }
 
-  /* Fix Contact paragraph alignment */
+  /* Contact paragraph spacing */
   .contact p {
+    font-size: 15px;
     width: 100%;
     text-align: center;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 25px auto;
+    line-height: 1.5;
   }
 
-  /* Fix Contact icon alignment */
+  /* Contact icons - perfectly centered */
   .contact-links {
     flex-direction: column;
     align-items: center !important;
-    gap: 12px;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
   }
 
-  /* Fix card sizing on small screens */
-  .glass-card,
-  .glass-card1 {
-    max-width: 90%;
-    margin: 15px auto;
+  /* Card adjustments for perfect look */
+  .contact-links button,
+  .contact-links a {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 14px;
   }
 
-  /* Fix hero mobile alignment */
+  .contact-links .icon {
+    font-size: 42px;
+    margin-bottom: 6px;
+  }
+
+  /* Hero alignment cleanup */
   .hero-inner {
+    flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .hero-title {
-    font-size: clamp(26px, 7vw, 36px);
+    font-size: clamp(26px, 7vw, 34px);
   }
 
   .hero-role {
-    font-size: clamp(16px, 5vw, 20px);
+    font-size: clamp(15px, 5vw, 20px);
   }
 
+  /* Home heading cleanup */
   .home h1 {
-    font-size: clamp(30px, 8vw, 40px);
+    font-size: clamp(28px, 8vw, 36px);
   }
 
-  /* Generic spacing safety */
-  .section, .proj, .home, .projdetails {
+  /* Cards for projects */
+  .glass-card,
+  .glass-card1 {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  /* Container padding improved */
+  .section,
+  .proj,
+  .home,
+  .projdetails {
     padding-left: 4vw;
     padding-right: 4vw;
   }

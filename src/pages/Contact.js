@@ -16,7 +16,7 @@ export default function Contact() {
     fontSize: "clamp(30px, 5vw, 42px)",
     fontWeight: 700,
     marginBottom: "15px",
-    paddingBottom: "85px",
+    paddingBottom: "55px",
     width: "100%",
     textAlign: "center",
     lineHeight: 1.1, // optional but improves balance

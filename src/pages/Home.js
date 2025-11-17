@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import avatar from "../assets/Gemini_Generated_Image_i5rso0i5rso0i5rs.png";
+// import avatar from "../assets/Gemini_Generated_Image_i5rso0i5rso0i5rs.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {

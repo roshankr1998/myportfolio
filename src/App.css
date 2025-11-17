@@ -135,77 +135,88 @@ header .container {
   .hero-right { order: -1 }
   .avatar { width:180px; height:180px }
 }
-/* ---------------------------------------------- */
-/* 🔥 FIX FOR TEXT-JUSTIFY + FONT + ALIGNMENT 🔥 */
-/* ---------------------------------------------- */
+/* ------------------------------------------------- */
+/* 🔥 UNIVERSAL MOBILE AUTO-SCALING (RESPONSIVE) FIX */
+/* ------------------------------------------------- */
 
 @media (max-width: 600px) {
 
-  /* Remove ugly justification anywhere */
-  p, span, .lead, .description, .text-block {
-    text-align: left !important;
+  /* Auto-adjust text on all elements */
+  body, p, span, li {
+    font-size: clamp(14px, 4vw, 16px) !important;
     line-height: 1.55;
-    word-spacing: normal;
   }
 
-  /* Contact paragraph specifically */
-  .contact p {
-    text-align: center !important;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  /* Section titles */
+  /* Responsive section headings */
   h1, h2, h3, .section-title {
+    font-size: clamp(22px, 7vw, 34px) !important;
     text-align: center !important;
     width: 100%;
     line-height: 1.2;
   }
 
-  .section-title {
-    font-size: clamp(26px, 8vw, 34px);
-  }
-
   /* Contact heading */
   .contact h2 {
-    font-size: clamp(26px, 8vw, 32px);
-    margin-bottom: 10px;
+    font-size: clamp(24px, 8vw, 32px) !important;
+    margin-bottom: 12px;
   }
 
-  /* Body text everywhere (clean readable size) */
-  body, p, li {
-    font-size: 15px !important;
+  /* Contact paragraph */
+  .contact p {
+    font-size: clamp(14px, 4vw, 16px);
+    text-align: center !important;
+    width: 100%;
+    margin: 0 auto 25px auto;
   }
 
-  /* Icons and buttons centered */
+  /* Contact icons and cards auto-adjust */
   .contact-links {
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: min(25px, 6vw);
+    width: 100%;
   }
 
   .contact-links button,
   .contact-links a {
-    width: 130px;
-    height: 130px;
+    width: min(150px, 40vw);    /* auto shrink based on screen */
+    height: min(150px, 40vw);
+    padding: 20px;
+    border-radius: 16px;
   }
 
+  /* Icons scale automatically */
   .contact-links .icon {
-    font-size: 42px;
+    font-size: clamp(32px, 10vw, 45px);
   }
 
-  /* Hero text cleanup */
-  .hero-title {
-    font-size: clamp(26px, 7vw, 34px);
+  /* Hero responsiveness */
+  .hero-inner {
+    flex-direction: column;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(24px, 8vw, 32px);
   }
 
   .hero-role {
-    font-size: clamp(15px, 5vw, 18px);
+    font-size: clamp(14px, 5vw, 18px);
   }
 
-  /* Generic padding fix */
-  .section, .proj, .home, .projdetails {
+  /* Auto scale project cards */
+  .glass-card,
+  .glass-card1 {
+    width: 92%;
+    margin: 0 auto 20px auto;
+  }
+
+  /* Reduce padding on small screens */
+  .section,
+  .proj,
+  .home,
+  .projdetails {
     padding-left: 4vw;
     padding-right: 4vw;
   }

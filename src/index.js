@@ -11,4 +11,19 @@ root.render(
   </React.StrictMode>
 );
 
+// Scroll progress bar: updates the width of #scroll-progress as the user scrolls
+function updateScrollProgress() {
+  const el = document.getElementById('scroll-progress');
+  if (!el) return;
+  const doc = document.documentElement;
+  const scrollTop = doc.scrollTop || document.body.scrollTop;
+  const height = doc.scrollHeight - doc.clientHeight;
+  const pct = height > 0 ? (scrollTop / height) * 100 : 0;
+  el.style.width = pct + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+window.addEventListener('resize', updateScrollProgress);
+updateScrollProgress();
+
 

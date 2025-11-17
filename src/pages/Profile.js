@@ -70,13 +70,13 @@ export default function Profile() {
 
       {/* ✅ Total questions solved section */}
       <p
-  style={{
-    fontSize: "1.2rem",
-    marginBottom: "2rem",
-    textAlign: "center",
-    color: "lightblue"
-  }}
->
+        style={{
+          fontSize: "1.2rem",
+          marginBottom: "2rem",
+          textAlign: "center",
+          color: "var(--accent-start)"
+        }}
+      >
         <u><strong>Total Questions Solved:</strong> {totalSolved}</u>
       </p>
 
@@ -94,7 +94,12 @@ export default function Profile() {
             <img
               src={profile.logo}
               alt={profile.platform}
-              style={{ width: "60px", height: "60px", marginBottom: "10px" }}
+              style={{
+                width: "60px",
+                height: "60px",
+                marginBottom: "10px",
+                filter: "drop-shadow(0 0 0.5rem var(--accent-start)) saturate(1.2)"
+              }}
             />
             <p>Username: {profile.username}</p>
             <p>Rating: {profile.rating}</p>
@@ -104,7 +109,7 @@ export default function Profile() {
                 href={profile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "white", textDecoration: "underline" }}
+                style={{ color: "var(--accent-start)", textDecoration: "underline" }}
               >
                 View Profile
               </a>

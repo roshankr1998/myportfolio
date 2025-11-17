@@ -1,94 +1,168 @@
+/* ================================
+   CONTACT SECTION LAYOUT
+=================================== */
+
 .contact {
-  text-align: center;
-  padding: 5vh 5vw;
-  justify-content: center;
-  animation: fadeIn 1s ease forwards;
-}
-
-.contact h2 {
-  font-size: clamp(28px, 6vw, 42px);
-  margin-bottom: 10px; /* reduce space below heading */
-  font-weight: 700;
-  color: #38bdf8;
-}
-
-.contact p {
-  font-size: clamp(15px, 3vw, 16px);
-  margin-top: 40px;
-  margin-bottom: 20px; /* reduce space below text */
-  color: #e2e8f0;
-  line-height: 1.5;
-}
-
-/* Links Container */
-.contact-links {
+  width: 100%;
+  padding: 10vh 5vw;
   display: flex;
-  margin-top: 30px;
-  padding-top: 30px;
-  gap: 30px; /* reduce gap between buttons if needed */
-  justify-content: center;
+  justify-content: center; /* Centers the content box horizontally */
   align-items: center;
-  flex-wrap: nowrap;
-  /* margin-top: 0; ensure no extra margin pushing down */
+  animation: fadeIn 0.8s ease forwards;
+  box-sizing: border-box;
 }
 
-/* Individual link/button */
-.contact-links button,
-.contact-links a {
+/* Main Content Wrapper 
+   CHANGED: Added Flex Column & Align Items Center 
+   This forces the H2, P, and Links to snap to the middle 
+*/
+.contact-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ================================
+   TYPOGRAPHY
+=================================== */
+
+.section-title {
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 700;
+  margin-bottom: 15px;
+  
+  /* Force Center Alignment */
+  width: 100%;
+  text-align: center;
+
+  /* Gradient Text Styles */
+  background: linear-gradient(90deg, var(--accent-start, #ff8a00), var(--accent-end, #e52e71));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Padding prevents gradient clipping at the bottom */
+  padding-bottom: 5px;
+}
+
+.contact-content p {
+  font-size: 17px;
+  color: var(--muted, #666); /* Darker grey for visibility on white */
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* ================================
+   LINKS CONTAINER
+=================================== */
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   CARDS (BUTTONS & LINKS)
+=================================== */
+
+/* Shared styles for both the <button> and the <a> */
+.contact-links button,
+.contact-links a {
+  width: 140px;
+  height: 140px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
   padding: 20px;
-  min-width: 120px;
-  max-width: 45%;
+  border-radius: 20px; /* Softer corners */
+  
+  /* Glass/Card Style */
+  background: #ffffff; /* Solid white for clean look, or use rgba for glass */
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  /* Interactive Properties */
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Resetting default button styles */
+  outline: none;
+  appearance: none;
+  font-family: inherit;
 }
 
+/* Hover Effect */
 .contact-links button:hover,
 .contact-links a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Icons */
-.contact-links .icon {
-  font-size: clamp(40px, 8vw, 80px);
+/* ================================
+   ICONS & WRAPPERS
+=================================== */
+
+/* Wrapper from your React code */
+.icon-wrapper {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Labels */
-.contact-links span {
-  font-size: clamp(16px, 3vw, 18px);
-  font-weight: 600;
-  color: #facc15;
+/* The actual Icon SVG */
+.icon {
+  font-size: 40px;
 }
 
-/* Email Icon Override */
+/* LinkedIn Button Specifics */
+.contact-links button .icon {
+  color: #fcd34d; /* Yellowish/Gold from your screenshot */
+}
+
+/* Email Link Specifics */
 .contact-links a .icon {
-  color: #f87171;
+  color: #f87171; /* Red/Salmon from your screenshot */
 }
 
-/* Responsive adjustments */
-@media (max-width: 480px) {
+/* Text Labels (LinkedIn / Email) */
+.contact-links span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333; /* Dark text for label */
+}
+
+/* ================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 500px) {
   .contact-links {
     gap: 20px;
   }
+  
   .contact-links button,
   .contact-links a {
-    min-width: 100px;
-    max-width: 45%;
+    width: 120px;
+    height: 120px;
   }
-  .contact-links .icon {
-    font-size: 60px;
-  }
-  .contact-links span {
-    font-size: 14px;
-  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

@@ -8,10 +8,11 @@ export default function WorkExperience() {
       title: "Senior Member Technical (SDE-2)",
       company: "Broadridge Financial Solutions",
       startDate: "2025-07-01",
-      endDate: null, // null means Present
+      endDate: null,
       description:
         "As a Senior Member Technical at Broadridge Financial Solutions, I have designed and implemented cloud-based solutions using AWS services such as EC2, S3, and RDS, improving infrastructure scalability and reliability. I automated deployment pipelines with Terraform, which reduced deployment time significantly. I also monitored and analyzed system performance to identify and mitigate potential bottlenecks, ensuring optimal application uptime. Additionally, I collaborated with cross-functional teams to migrate legacy systems to cloud environments, achieving a 25% reduction in operational costs."
-    },{
+    },
+    {
       title: "Member Technical (SDE-1)",
       company: "Broadridge Financial Solutions",
       startDate: "2023-07-01",
@@ -36,64 +37,77 @@ export default function WorkExperience() {
   };
 
   return (
-    <section className="work-experience">
-      <div className="container">
-        <h2 className="section-title">Work Experience</h2>
-        <div className="timeline">
-          {experiences.map((exp, idx) => (
-            <div
-              key={idx}
-              className={`timeline-item ${expandedIndex === idx ? "expanded" : ""}`}
-              onClick={() => toggleExpand(idx)}
-            >
-              <div className="timeline-icon">
-                <FaBriefcase size={16} />
-              </div>
-              <div className="timeline-content">
-                <h3>{exp.title}</h3>
-                <span className="company">{exp.company}</span>
-                <span className="duration">{formatRangeAndDuration(exp.startDate, exp.endDate)}</span>
-                <p className={`description ${expandedIndex === idx ? "show" : ""}`}>
-                  {exp.description}
-                </p>
-                <div className="chevron">
-                  {expandedIndex === idx ? <FaChevronUp size={12} /> : <FaChevronDown size={12} />}
-                </div>
+    <section className="work-section">
+      <h2 className="section-title">Work Experience</h2>
+
+      <div className="step-timeline">
+        {experiences.map((exp, idx) => (
+          <div
+            key={idx}
+            className={`step-item ${expandedIndex === idx ? "expanded" : ""}`}
+          >
+            {/* Step Indicator */}
+            <div className="step-marker">
+              <FaBriefcase size={16} />
+            </div>
+
+            {/* Step Content */}
+            <div className="step-content" onClick={() => toggleExpand(idx)}>
+              <h3>{exp.title}</h3>
+              <p className="company">{exp.company}</p>
+              <p className="duration">{formatRangeAndDuration(exp.startDate, exp.endDate)}</p>
+
+              <p className={`description ${expandedIndex === idx ? "show" : ""}`}>
+                {exp.description}
+              </p>
+
+              <div className="chevron">
+                {expandedIndex === idx ? <FaChevronUp /> : <FaChevronDown />}
               </div>
             </div>
-          ))}
-        </div>
+
+            {/* Connector Line */}
+            {idx !== experiences.length - 1 && <div className="step-line"></div>}
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
-// Helper: format month and year like "Jul 2025"
+
+// ---------------------- Helper Functions -----------------------------
+
 function formatMonthYear(isoDate) {
   if (!isoDate) return "Present";
   const d = new Date(isoDate);
-  const opts = { year: 'numeric', month: 'short' };
+  const opts = { year: "numeric", month: "short" };
   return d.toLocaleDateString(undefined, opts);
 }
 
-// Helper: compute human readable duration between two dates (endDate can be null for Present)
 function computeDuration(startIso, endIso) {
   const start = new Date(startIso);
   const end = endIso ? new Date(endIso) : new Date();
-  let months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-  if (end.getDate() < start.getDate()) months -= 1; // adjust if not full month
+
+  let months =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
+
+  if (end.getDate() < start.getDate()) months -= 1;
   if (months < 0) months = 0;
+
   const years = Math.floor(months / 12);
-  const remMonths = months % 12;
+  const rem = months % 12;
+
   if (years > 0) {
-    return remMonths > 0 ? `${years} yr${years>1? 's':''} ${remMonths} mo` : `${years} yr${years>1? 's':''}`;
+    return rem > 0 ? `${years} yr ${rem} mo` : `${years} yr`;
   }
-  return `${remMonths} mo`;
+  return `${rem} mo`;
 }
 
 function formatRangeAndDuration(startIso, endIso) {
   const from = formatMonthYear(startIso);
-  const to = endIso ? formatMonthYear(endIso) : 'Present';
+  const to = endIso ? formatMonthYear(endIso) : "Present";
   const dur = computeDuration(startIso, endIso);
   return `${from} — ${to} • ${dur}`;
 }

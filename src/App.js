@@ -30,6 +30,7 @@ function App() {
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/video" element={<VideoPlayer />} />
             <Route path="/Experience" element={<Experience/>}/>
+            {/* palette preview route removed — coral is the global theme now */}
           </Routes>
         </div>
         <footer>&copy; 2025 Roshan Kumar. All rights reserved.</footer>
